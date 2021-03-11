@@ -10,12 +10,13 @@
 
                     <div class="card-body">
 
-                        <form action="{{route('user.update', ['id' => $user->id])}}" class="form-row" method="post">
+                        <form id="myForm" action="{{route('user.update', ['id' => $user->id])}}" class="form-row"  method="post" >
                             @csrf
 
                             <div class="form-group col-md-6">
                                 <label>Nombre Usuario</label>
                                 <input type="text" id="user" name="name"  value="{{$user->name}}" class="form-control">
+                                <input type="hidden" id="ide" value="{{$user->id}}">
                             </div>
 
                             <div class="form-group col-md-6">
@@ -33,7 +34,7 @@
                                 <input type="password" id="password_confirm" name="password_confirm" class="form-control">
                             </div>
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary"> Enviar</button>
+                                <button type="button" id="enviar" class="btn btn-primary"> Enviar</button>
                             </div>
 
 
@@ -48,11 +49,23 @@
 @endsection
 @section('js')
     <script>
-        // function validarPassword(){
-        //
-        // }
+         $('document').ready(function(){
 
-        $('document').ready(function(){
+                    let name = $('#user').val()
+                    let email = $('#email').val()
+                    let pass = $('#password').val()
+
+             $('#enviar').click(function(){
+                 if(name.length > 1){
+                     //$('myForm').submit()
+                     alert('debe llenar la infor: '+name)
+                 }else{
+                     alert('debe llenar la infor')
+                 }
+             })
+
+
+
 
         })
     </script>

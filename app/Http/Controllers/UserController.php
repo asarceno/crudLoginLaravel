@@ -11,7 +11,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::orderBy('id', 'ASC')->paginate(10);
+        $users = User::orderBy('id', 'ASC')->paginate(5);
 
         return view('users.index')
             ->with('users', $users);
@@ -29,7 +29,7 @@ class UserController extends Controller
     {
 
         $user = new User();
-        $user->name = $request->campo1;
+        $user->name =  $request->campo1;
         $user->email = $request->campo2;
         $user->password = bcrypt($request->password);
         $user->save();
@@ -48,13 +48,21 @@ class UserController extends Controller
     {
         $user = User::findOrfail($id);
 
+        $data  = [
+            'code' => 200,
+            'usuario' => $user
+        ];
+
         return view('users.edit')
             ->with('user', $user);
+
+//        return response()->json($data);
     }
 
 
     public function update(Request $request, $id)
     {
+
         $user = User::findOrfail($id);
         $user->fill($request->all());
         $user->setPasswordAttribute($request->password);
@@ -67,6 +75,10 @@ class UserController extends Controller
 
     public function destroy($id)
     {
-        //
+
+        $userDelete = User::findOrfail($id);
+        $userDelete->delete();
+
+        return redirect(route('users.index'));
     }
 }

@@ -11,6 +11,7 @@
 
                         <a href="/user/create" class="btn btn-primary mb-3">Crear usuario</a>
                         <div class="table-responsive">
+                            {{ $users->links() }}
                             <table class="table table-hover table-striped table-bordered">
                                 <thead>
                                     <th>Nombre</th>
@@ -24,6 +25,7 @@
                                         <td>{{ $user->email }}</td>
                                         <td>
                                             <a href="/user/edit/{{$user->id}}" class="btn btn-warning"> <i class="fas fa-edit"></i> </a>
+                                            <a href="/user/delete/{{$user->id}}" class="btn btn-danger"> <i class="fas fa-ban"></i> </a>
 
                                         </td>
                                     </tr>
