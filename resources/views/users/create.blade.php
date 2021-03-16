@@ -1,12 +1,16 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Crear Usuarios</h1>
+@stop
+
 @section('content')
-
-
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Creación de usuario</div>
 
                     <div class="card-body">
 
@@ -49,8 +53,12 @@
             </div>
         </div>
     </div>
+@stop
 
-@endsection
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
 @section('js')
     <script>
 
