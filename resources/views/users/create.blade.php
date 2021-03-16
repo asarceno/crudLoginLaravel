@@ -38,12 +38,9 @@
                                 </div>
 
                                 <div class="col-md-6 fa-pull-left">
-                                    <a href="{{ redirect()->back()->getTargetUrl() }}"  class="btn btn-warning"> refresar</a>
+                                    <a href="{{ redirect()->back()->getTargetUrl() }}"  class="btn btn-warning"> Regresar</a>
                                 </div>
                             </div>
-
-
-
 
                         </form>
 
@@ -61,7 +58,7 @@
             let contra =  $('#password').val()
             if(contra.length < 8){
 
-                alert('La contraseña debe ser mayor a 8 carcteres')
+                alert('La contraseña debe ser mayor a 8 caracteres')
 
             }else{
                 $("#myform").submit()
