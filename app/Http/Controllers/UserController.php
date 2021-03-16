@@ -56,7 +56,6 @@ class UserController extends Controller
         return view('users.edit')
             ->with('user', $user);
 
-//        return response()->json($data);
     }
 
 

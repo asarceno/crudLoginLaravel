@@ -10,7 +10,7 @@
 
                     <div class="card-body">
 
-                        <form action="{{ route('user.store')  }}" class="form-row" method="POST">
+                        <form action="{{ route('user.store')  }}" class="form-row" method="POST" id="myform">
                             @csrf
 
                             <div class="form-group col-md-6">
@@ -33,8 +33,16 @@
                                 <input type="password" id="password_confirm" name="password_confirm" class="form-control">
                             </div>
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary"> Enviar</button>
+                                <div class="col-md-6 fa-pull-left">
+                                    <button type="button" class="btn btn-primary" onclick="enviar();"> Enviar</button>
+                                </div>
+
+                                <div class="col-md-6 fa-pull-left">
+                                    <a href="{{ redirect()->back()->getTargetUrl() }}"  class="btn btn-warning"> refresar</a>
+                                </div>
                             </div>
+
+
 
 
                         </form>
@@ -48,13 +56,18 @@
 @endsection
 @section('js')
     <script>
-       // function validarPassword(){
-       //
-       // }
 
-       $('document').ready(function(){
+        function enviar(){
+            let contra =  $('#password').val()
+            if(contra.length < 8){
 
-       })
+                alert('La contraseña debe ser mayor a 8 carcteres')
+
+            }else{
+                $("#myform").submit()
+            }
+
+        }
     </script>
 
 @endsection
