@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Prueba 2</b>Disi',
+    'logo' => '<b>Sistema</b>POS',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -84,7 +84,7 @@ return [
     */
 
     'layout_topnav' => null,
-    'layout_boxed' => null,
+    'layout_boxed' => false,
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
@@ -236,7 +236,7 @@ return [
         ],
         [
             'text'        => 'users',
-            'url'         => 'admin/pages',
+            'url'         => 'admin/users',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
