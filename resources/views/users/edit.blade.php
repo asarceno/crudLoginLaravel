@@ -34,7 +34,7 @@
                                 <input type="password" id="password_confirm" name="password_confirm" class="form-control">
                             </div>
                             <div class="col-md-12">
-                                <button type="button" id="enviar" onclick="enviar()" class="btn btn-primary"> Enviar</button>
+                                <button type="submit" id="enviar"  class="btn btn-primary"> Enviar</button>
                             </div>
 
 
@@ -50,14 +50,6 @@
 @section('js')
     <script>
 
-        function enviar(){
-                 // let name = $('#user').val()
-                 // let email = $('#email').val()
-                 // let pass = $('#password').val()
-
-            console.log('mostrar')
-
-     }
 
 
 
