@@ -236,7 +236,7 @@ return [
         ],
         [
             'text'        => 'users',
-            'url'         => 'admin/users',
+            'url'         => 'users',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
@@ -426,5 +426,5 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/9.-Other-Configuration
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];

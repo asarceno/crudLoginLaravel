@@ -27,7 +27,7 @@ Route::group(['middleware' => 'auth'], function(){
         return redirect()->route('home');
     });
     Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('users/list', 'UserController@index')->name('users.index');
+    Route::get('users/', 'UserController@index')->name('users.index');
     Route::get('user/create', 'UserController@create')->name('user.create');
     Route::post('user/store', 'UserController@store')->name('user.store');
     Route::get('user/edit/{id}', 'UserController@edit')->name('user.edit');

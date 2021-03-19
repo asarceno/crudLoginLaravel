@@ -42,8 +42,10 @@
                                 </div>
 
                                 <div class="col-md-6 fa-pull-left">
-                                    <a href="{{ redirect()->back()->getTargetUrl() }}"  class="btn btn-warning"> Regresar</a>
+{{--                                    <a href="{{ redirect()->back()->getTargetUrl() }}"  class="btn btn-warning"> Regresar</a>--}}
+                                    <x-adminlte-button class="btn-flat" type="submit" label="Submit" theme="success" icon="fas fa-lg fa-save"/>
                                 </div>
+
                             </div>
 
                         </form>
